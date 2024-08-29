@@ -5,7 +5,7 @@ import mindustry.ctype.ContentList;
 import mindustry.type.Liquid;
 
 public class ModLiquids implements ContentList {
-    public static Liquid liquidGraphenite, magma, thoriumRefrigerant, liquidMethane;
+    public static Liquid liquidGraphenite, magma, thoriumRefrigerant, liquidMethane, methane;
 
     @Override
     public void load() {
@@ -46,6 +46,12 @@ public class ModLiquids implements ContentList {
             this.viscosity = 0.7f;
             this.color = Color.valueOf("37f29b");
             this.lightColor = Color.valueOf("A3FFE8").a(0.3f);
+        }};
+        methane = new Liquid("liquid-methane"){{
+            localizedName = "Methane";
+            color = Color.valueOf("37f29b");
+            gas = true;
+            coolant = false;
         }};
     }
 }
